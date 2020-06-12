@@ -30,16 +30,16 @@ std::array<std::array<uint8_t, width>, height> decompressGrayscale(const std::ve
     std::array<std::array<uint8_t, width>, height> decompressed;
 
     size_t row = 0;
-    size_t col = 0;
+    size_t column = 0;
 
     for (const auto& [color, count] : compressed) {
         if (row < height) {
             for (size_t i = 0; i < count; i++) {
-                decompressed[row][col] = color;
-                if (col < width - 1) {
-                    col++;
+                decompressed[row][column] = color;
+                if (column < width - 1) {
+                    column++;
                 } else {
-                    col = 0;
+                    column = 0;
                     row++;
                 }
             }
