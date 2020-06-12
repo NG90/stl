@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <iostream>
 #include <utility>
 #include <vector>
 
@@ -10,3 +11,5 @@ constexpr size_t height = 32;
 std::vector<std::pair<uint8_t, uint8_t>> compressGrayscale(const std::array<std::array<uint8_t, width>, height>& bitmap);
 
 std::array<std::array<uint8_t, width>, height> decompressGrayscale(const std::vector<std::pair<uint8_t, uint8_t>>& compressed);
+
+void printMap(std::array<std::array<uint8_t, 32UL>, 32UL> bitmap);

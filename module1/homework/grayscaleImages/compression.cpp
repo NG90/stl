@@ -50,3 +50,12 @@ std::array<std::array<uint8_t, width>, height> decompressGrayscale(const std::ve
 
     return decompressed;
 }
+
+void printMap(std::array<std::array<uint8_t, 32UL>, 32UL> bitmap) {
+    for (const auto& arr : bitmap) {
+        for (const auto el : arr) {
+            std::cout << el;
+        }
+        std::cout << '\n';
+    }
+}
